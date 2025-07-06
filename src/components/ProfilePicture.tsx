@@ -87,7 +87,7 @@ export default function ProfilePicture({
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 1.0 + 2 * 0.1 }}
-          className="absolute bottom-16 left-24 text-2xl z-10"
+          className="absolute bottom-14 left-18 text-2xl z-10"
         >
           <motion.div
             animate={{
@@ -109,7 +109,7 @@ export default function ProfilePicture({
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 1.2 + 3 * 0.1 }}
-          className="absolute top-10 left-36 text-2xl z-10"
+          className="absolute top-10 left-32 text-2xl z-10"
         >
           <motion.div
             animate={{
