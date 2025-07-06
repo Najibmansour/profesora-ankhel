@@ -12,7 +12,7 @@ export default function ProfilePicture({
   className = "",
 }: ProfilePictureProps) {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className} z-0`}>
       {/* Background blobs - stacked in center */}
       <div className="absolute inset-0 flex items-center justify-center">
         {/* Purple color blob - top blob layer */}
@@ -65,7 +65,7 @@ export default function ProfilePicture({
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.8 + 1 * 0.1 }}
-          className="absolute top-2 right-[5rem] text-2xl z-10"
+          className="absolute top-2 right-[5rem] text-2xl z-0"
         >
           <motion.div
             animate={{
@@ -87,7 +87,7 @@ export default function ProfilePicture({
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 1.0 + 2 * 0.1 }}
-          className="absolute bottom-14 left-18 text-2xl z-10"
+          className="absolute top-50 left-18 text-2xl z-0"
         >
           <motion.div
             animate={{
@@ -109,7 +109,7 @@ export default function ProfilePicture({
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 1.2 + 3 * 0.1 }}
-          className="absolute top-10 left-32 text-2xl z-10"
+          className="absolute top-10 left-32 text-2xl z-0"
         >
           <motion.div
             animate={{
@@ -131,7 +131,7 @@ export default function ProfilePicture({
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 1.4 + 4 * 0.1 }}
-          className="absolute bottom-4 right-22 text-2xl z-10"
+          className="absolute top-60 right-22 text-2xl z-0"
         >
           <motion.div
             animate={{
@@ -151,7 +151,7 @@ export default function ProfilePicture({
       </div>
 
       {/* Profile picture - on top */}
-      <div className="relative z-10 flex items-center justify-center ">
+      <div className="relative z-0 flex items-center justify-center mt-0 -mb-[40%]">
         <motion.div
           className="relative"
           animate={{
