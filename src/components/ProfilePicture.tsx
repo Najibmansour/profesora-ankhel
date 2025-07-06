@@ -17,7 +17,7 @@ export default function ProfilePicture({
       <div className="absolute inset-0 flex items-center justify-center">
         {/* Purple color blob - top blob layer */}
         <motion.div
-          className="absolute w-24 h-24 rounded-full bg-purple-500/50 blur-sm top-0 right-20"
+          className="absolute w-24 h-24 rounded-full bg-purple-500/50 blur-sm top-0 right-18"
           animate={{
             y: [0, -12, 8, -6, 0],
             x: [0, 7, -5, 3, -2, 0],
@@ -47,7 +47,7 @@ export default function ProfilePicture({
 
         {/* Primary color blob - middle layer */}
         <motion.div
-          className="absolute w-28 h-28 rounded-full bg-amber-600/50 blur-sm top-6 left-[20%]"
+          className="absolute w-28 h-28 rounded-full bg-amber-600/50 blur-sm top-6 left-[30%]"
           animate={{
             y: [0, -9, 6, -4, 2, 0],
             x: [0, 8, -6, 4, -3, 0],
