@@ -32,7 +32,7 @@ export default function ProfilePicture({
 
         {/* Accent color blob - bottom layer */}
         <motion.div
-          className="absolute w-44 h-44 rounded-full bg-amber-300/50 blur-sm -bottom-10 left-32"
+          className="absolute w-44 h-44 rounded-full bg-amber-300/50 blur-sm -bottom-10 left-[30%]"
           animate={{
             y: [0, 9, -7, 4, -3, 0],
             x: [0, -8, 6, -4, 2, 0],
@@ -47,7 +47,7 @@ export default function ProfilePicture({
 
         {/* Primary color blob - middle layer */}
         <motion.div
-          className="absolute w-28 h-28 rounded-full bg-amber-600/50 blur-sm top-6 left-28"
+          className="absolute w-28 h-28 rounded-full bg-amber-600/50 blur-sm top-6 left-[20%]"
           animate={{
             y: [0, -9, 6, -4, 2, 0],
             x: [0, 8, -6, 4, -3, 0],
@@ -113,8 +113,8 @@ export default function ProfilePicture({
         >
           <motion.div
             animate={{
-              y: [0, -7, 5, -3, 0],
-              x: [0, 4, -3, 2, 0],
+              x: [0, -4, 3, -2, 0],
+              y: [0, -5, 3, -2, 0],
               rotate: [-10, 5, -10],
             }}
             transition={{
