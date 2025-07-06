@@ -19,7 +19,10 @@ interface CardCarouselProps {
   className?: string;
 }
 
-export default function CardCarousel({ cards, className = "" }: CardCarouselProps) {
+export default function CardCarousel({
+  cards,
+  className = "",
+}: CardCarouselProps) {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -48,64 +51,27 @@ export default function CardCarousel({ cards, className = "" }: CardCarouselProp
         opts={{
           align: "start",
           loop: true,
-
         }}
       >
-     <CarouselContent>
+        <CarouselContent>
           {cards.map((card, index) => (
-            <CarouselItem key={card.id} >
+            <CarouselItem key={index}>
               <Card className="border-0 min-h-96 shadow-lg relative rounded-xl ">
                 <CardContent className="p-0 ">
-                  {/* Card Icon */} 
-                <div className="text-3xl mb-1 absolute -top-10 left-10 z-50">{card.icon}</div>
-                  {/* Card Image */}
-                  
-                  <div className="w-full max-h-48 bg-gradient-to-br  from-primary/20 to-accent/20 flex items-center justify-center rounded-t-xl relative">
-                    <Image 
-                      src={card.image} 
-                      alt={card.title}  
-                      className="rounded-t-xl w-full h-48 object-cover"
-                      
-                    />
-                    
-                    {/* Floating Icons around the profile picture */}
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                      className="absolute top-4 right-4 text-2xl z-10"
-                    >
-                      🧠
-                    </motion.div>
-                    
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
-                      className="absolute bottom-6 left-6 text-2xl z-10"
-                    >
-                      💭
-                    </motion.div>
-                    
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                      className="absolute top-8 left-8 text-2xl z-10"
-                    >
-                      💕
-                    </motion.div>
-                    
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-                      className="absolute bottom-4 right-8 text-2xl z-10"
-                    >
-                      🌟
-                    </motion.div>
+                  {/* Card Icon */}
+                  <div className="text-3xl mb-1 absolute -top-10 left-10 z-50">
+                    {card.icon}
                   </div>
-                  
+                  {/* Card Image */}
+
+                  <div className="w-full max-h-48 bg-gradient-to-br  from-primary/20 to-accent/20 flex items-center justify-center rounded-t-xl relative">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      className="rounded-t-xl w-full h-48 object-cover"
+                    />
+                  </div>
+
                   {/* Card Content */}
                   <div className="p-4">
                     <h3 className="text-lg font-semibold text-text-dark mb-2">
@@ -120,7 +86,7 @@ export default function CardCarousel({ cards, className = "" }: CardCarouselProp
             </CarouselItem>
           ))}
         </CarouselContent>
-        
+
         {/* Navigation Dots */}
         <div className="flex justify-center space-x-1 mt-3">
           {cards.map((_, index) => (
@@ -128,7 +94,7 @@ export default function CardCarousel({ cards, className = "" }: CardCarouselProp
               key={index}
               onClick={() => api?.scrollTo(index)}
               className={`w-2 h-2 rounded-full transition-colors ${
-                index === current - 1 ? 'bg-primary' : 'bg-text-muted/30'
+                index === current - 1 ? "bg-primary" : "bg-text-muted/30"
               }`}
             />
           ))}
@@ -136,4 +102,4 @@ export default function CardCarousel({ cards, className = "" }: CardCarouselProp
       </Carousel>
     </motion.div>
   );
-} 
+}

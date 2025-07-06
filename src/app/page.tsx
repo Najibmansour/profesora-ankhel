@@ -29,6 +29,13 @@ export default function Home() {
       },
       {
         id: 3,
+        icon: "🧚‍♀️",
+        image: angy_main,
+        title: "Milo",
+        paragraph: "istg not a single human hasnt met you and said so many good things about you. angy u're literally the kindest soul to ever exist. wish u all the best and may 21 treat u as good as ur heart is <3"
+      },
+      {
+        id: 3,
         icon: "💕",
         image: angy_main,
         title: "Milo",
