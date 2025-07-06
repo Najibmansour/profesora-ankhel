@@ -19,19 +19,13 @@ interface HeroSectionProps {
   cards: TCard[];
 }
 
-export default function HeroSection({ name,  cards }: HeroSectionProps) {
+export default function HeroSection({ name, cards }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-10">
+    <section className="relative min-h-screen flex items-center justify-center py-0">
       <div className="max-w-md mx-auto px-0">
         <div className="space-y-16">
           {/* Title */}
-          <HeroContent
-            name={name}
-            
-            className="order-1"
-          />
-
-         
+          <HeroContent name={name} className="order-1" />
 
           {/* Card Carousel */}
           <CardCarousel cards={cards} className="order-3" />
@@ -42,4 +36,4 @@ export default function HeroSection({ name,  cards }: HeroSectionProps) {
       <BackgroundDecorations />
     </section>
   );
-} 
+}
