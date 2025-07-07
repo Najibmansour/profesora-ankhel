@@ -32,7 +32,7 @@ export default function ProfilePicture({
 
         {/* Accent color blob - bottom layer */}
         <motion.div
-          className="absolute w-44 h-44 rounded-full bg-amber-300/50 blur-sm -bottom-10 left-[30%]"
+          className="absolute w-44 h-44 rounded-full bg-amber-300/50 blur-sm bottom-[20%] left-[30%]"
           animate={{
             y: [0, 9, -7, 4, -3, 0],
             x: [0, -8, 6, -4, 2, 0],
