@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import useSound from "use-sound";
+import { Howl } from "howler";
 import Image, { StaticImageData } from "next/image";
 
 interface JumpscareProps {
@@ -38,59 +38,60 @@ const Jumpscare: React.FC<JumpscareProps> = ({
   enabled = true,
 }) => {
   const [showScare, setShowScare] = useState(false);
-  const [scareCount, setScareCount] = useState(0);
+  const soundRef = useRef<Howl | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Initialize sound if provided
-  const [play] = useSound(soundFile || "", {
-    volume: 0.5,
-    // Only initialize if sound file is provided
-    ...(soundFile ? {} : { soundEnabled: false }),
-  });
+  // Create sound only once
+  useEffect(() => {
+    if (soundFile) {
+      soundRef.current = new Howl({
+        src: [soundFile],
+        volume: 0.5,
+      });
+    }
+  }, [soundFile]);
 
   const triggerScare = () => {
     if (!enabled) return;
 
     setShowScare(true);
-    setScareCount((prev) => prev + 1);
 
-    // Play sound if available
-    if (soundFile) {
-      play();
+    // Play sound reliably
+    if (soundRef.current) {
+      soundRef.current.play();
     }
 
-    // Trigger vibration on mobile if enabled
     if (enableVibration && "vibrate" in navigator) {
       navigator.vibrate(500);
     }
 
-    // Hide scare after duration
     setTimeout(() => {
       setShowScare(false);
     }, scareDuration);
   };
 
+  const scheduleNextScare = () => {
+    if (!enabled) return;
+
+    const delay = Math.random() * (maxDelay - minDelay) + minDelay;
+
+    timeoutRef.current = setTimeout(() => {
+      triggerScare();
+      if (multipleScares) {
+        timeoutRef.current = setTimeout(scheduleNextScare, scareInterval);
+      }
+    }, delay);
+  };
+
   useEffect(() => {
     if (!enabled) return;
 
-    const scheduleScare = () => {
-      const randomTime = Math.random() * (maxDelay - minDelay) + minDelay;
+    scheduleNextScare();
 
-      const timer = setTimeout(() => {
-        triggerScare();
-
-        // Schedule next scare if multiple scares are enabled
-        if (multipleScares) {
-          setTimeout(scheduleScare, scareInterval);
-        }
-      }, randomTime);
-
-      return timer;
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
-
-    const timer = scheduleScare();
-
-    return () => clearTimeout(timer);
-  }, [enabled, minDelay, maxDelay, multipleScares, scareInterval, scareCount]);
+  }, [enabled, minDelay, maxDelay, multipleScares, scareInterval]);
 
   // Default scary face emoji if no image provided
   const defaultScare = "😱";

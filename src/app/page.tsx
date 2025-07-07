@@ -8,7 +8,7 @@ import marie_pic from "../../public/images/friends/marie.jpeg";
 import wiam_pic from "../../public/images/friends/wiam.jpeg";
 import reem_pic from "../../public/images/friends/reem.jpeg";
 
-import lacan_jumpsace from "../../public/images/lacan_jumpsacre.png";
+import lacan_jumpsace from "../../public/images/lacan_jumpscare.png";
 
 // import scare from "../../public/sounds/scare.mp3";
 
@@ -66,16 +66,16 @@ export default function Home() {
       {/* Jumpscare Component - Customize these props as needed */}
       <Jumpscare
         // Uncomment and add your sound file path if you want audio
-        soundFile="../../public/sounds/scare.mp3"
+        soundFile="/sounds/scare.mp3"
         // Uncomment and add your image file path if you want a custom image
         // imageFile="/images/scary-face.png"
         // Timing configuration
-        minDelay={2000} // 15 seconds minimum
-        maxDelay={2000} // 45 seconds maximum
-        scareDuration={1500} // 2.5 seconds visible
+        minDelay={10000} // 15 seconds minimum
+        maxDelay={10000} // 45 seconds maximum
+        scareDuration={3500} // 2.5 seconds visible
         // Multiple scares (optional)
         multipleScares={true}
-        scareInterval={120000} // 2 minutes between scares
+        scareInterval={10000} // 2 minutes between scares
         // Mobile features
         enableVibration={true}
         // Enable/disable the jumpscare
