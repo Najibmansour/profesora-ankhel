@@ -70,8 +70,8 @@ export default function Home() {
         // Uncomment and add your image file path if you want a custom image
         // imageFile="/images/scary-face.png"
         // Timing configuration
-        minDelay={10000} // 15 seconds minimum
-        maxDelay={10000} // 45 seconds maximum
+        minDelay={60000} // 15 seconds minimum
+        maxDelay={120000} // 45 seconds maximum
         scareDuration={3500} // 2.5 seconds visible
         // Multiple scares (optional)
         multipleScares={true}
