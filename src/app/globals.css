@@ -175,3 +175,37 @@
     font-weight: 900;
   }
 }
+
+/* Custom Swiper Pagination Styles */
+.swiper-pagination {
+  display: none !important; /* Hide default pagination since we use custom dots */
+}
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: rgba(156, 163, 175, 0.3) !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: hsl(var(--primary)) !important;
+  transform: scale(1.2) !important;
+}
+
+/* Ensure Swiper container clips content properly */
+.swiper {
+  overflow: hidden !important;
+  width: 100% !important;
+}
+
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  height: auto;
+  display: flex;
+  width: 100% !important;
+}
