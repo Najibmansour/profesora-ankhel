@@ -86,7 +86,7 @@ export default function CardCarousel({
                   {/* Card Content */}
                   <div className="p-4 rounded-xl">
                     <h3 className="text-lg font-semibold text-text-dark mb-2">
-                      {card.title}
+                      {card.title} {card.icon}
                     </h3>
                     <p className="text-text-muted text-sm leading-relaxed">
                       {card.paragraph}

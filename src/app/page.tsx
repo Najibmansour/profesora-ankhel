@@ -81,7 +81,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen max-h-screen bg-bg-light ">
+    <div className="min-h-screen  bg-bg-light ">
       <HeroSection {...heroData} />
 
       {/* Jumpscare Component - Customize these props as needed */}
@@ -95,7 +95,7 @@ export default function Home() {
         maxDelay={120000} // 45 seconds maximum
         scareDuration={3500} // 2.5 seconds visible
         // Multiple scares (optional)
-        multipleScares={true}
+        multipleScares={false}
         scareInterval={10000} // 2 minutes between scares
         // Mobile features
         enableVibration={true}
