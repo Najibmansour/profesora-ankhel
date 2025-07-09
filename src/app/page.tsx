@@ -48,9 +48,9 @@ export default function Home() {
       },
       {
         id: 3,
-        icon: "💭",
+        icon: "😫👉🏽👈🏽",
         image: wiam_pic,
-        title: "Wiamm",
+        title: "Wiam",
         paragraph:
           "Angy you're an angel on earth, yet you're so humble so human so precious I pray you get everything you dream of in life you deserve heaven on earth my love ❤️",
       },
