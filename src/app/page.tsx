@@ -12,6 +12,7 @@ import milo_pic from "../../public/images/friends/milo.jpeg";
 import gmc_pic from "../../public/images/friends/gmc.jpeg";
 import vivo_pic from "../../public/images/friends/vivo.jpeg";
 import celine_pic from "../../public/images/friends/celine.jpeg";
+import jade_pic from "../../public/images/friends/jade.jpeg";
 
 import lacan_jumpsace from "../../public/images/lacan_jumpscare.png";
 
@@ -22,7 +23,7 @@ export default function Home() {
     name: "Profesora Ankhel",
     cards: [
       {
-        id: 3,
+        id: 0,
         icon: "🧚‍♀️",
         image: milo_pic,
         title: "Milo",
@@ -38,7 +39,7 @@ export default function Home() {
           "angyy you're the nicest person ever, may your 21st be blessed with things that make you happy! know that i'll be here whenever you need <3 I wish you peace of mind and success :)",
       },
       {
-        id: 3,
+        id: 2,
         icon: "🧚‍♀️",
         image: vivo_pic,
         title: "Vivo",
@@ -46,7 +47,7 @@ export default function Home() {
           "Happy birthday honey. you're always on my mind, sweetheart. I am wishing you endless success. I've watched you become the most amazing, beautiful woman. You're a little older, but still my baby. I'm always going to be here for you, love. You're the best daughter anyone could have, and I am so thankful for you.",
       },
       {
-        id: 2,
+        id: 3,
         icon: "💭",
         image: wiam_pic,
         title: "Wiamm",
@@ -54,7 +55,15 @@ export default function Home() {
           "Angy you're an angel on earth, yet you're so humble so human so precious I pray you get everything you dream of in life you deserve heaven on earth my love ❤️",
       },
       {
-        id: 3,
+        id: 4,
+        icon: "🐛",
+        image: jade_pic,
+        title: "Jade",
+        paragraph:
+          "You're an awesome and amazing friend !! And our friendship means soooo much to me!!! I love you tons and tons and want you to know that you're one of the sweetest and coolest and most important people in my life!! Our friendship has always brought me happiness and peace and  comfort :)) And I want you to know that you're loved!! That I love you!!!!! And everything about you :]  A a subject of course, never an object <333",
+      },
+      {
+        id: 5,
         icon: "💛",
         image: gmc_pic,
         title: "GMC",
@@ -62,7 +71,7 @@ export default function Home() {
           "To the kindest soul, Happy Birthday Anouj 🎂💛 You've always had a special way of making people feel loved. I'll never forget that. No matter how far life takes us, I'm really thankful for everything we shared. Wishing you all the happiness in the world today. Keep being you ✨",
       },
       {
-        id: 4,
+        id: 6,
         icon: "😉",
         image: reem_pic,
         title: "Reem",
@@ -70,7 +79,7 @@ export default function Home() {
           "as my memory of yesterday morphs into your celebration of today, i take the opportunity to express my never-ending pride and joy in you. \t sweet twenty-first angy, may we never cease to pass our torches right back to each other…",
       },
       {
-        id: 5,
+        id: 7,
         icon: "🌟",
         image: celine_pic,
         title: "Celine",
