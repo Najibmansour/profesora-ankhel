@@ -99,7 +99,7 @@ export default function CardCarousel({
         </Swiper>
 
         {/* Custom Navigation Dots */}
-        <div className="flex justify-center space-x-1 mt-3">
+        {/* <div className="flex justify-center space-x-1 mt-3">
           {cards.map((_, index) => (
             <button
               key={index}
@@ -109,7 +109,7 @@ export default function CardCarousel({
               }`}
             />
           ))}
-        </div>
+        </div> */}
       </motion.div>
     </motion.div>
   );
