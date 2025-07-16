@@ -53,7 +53,7 @@ export async function GET(req: NextRequest) {
   )}&type=video&order=${config.order || 'relevance'}&videoDuration=${config.videoDuration || 'any'}&safeSearch=${config.safeSearch || 'none'}&regionCode=${config.regionCode || 'US'}&key=${API_KEY}`;
   const res = await fetch(url, {cache: "no-cache"});
   const data = await res.json();
-  console.log(combinedTopicStr);
+  console.log(data);
 
   if (data.items) {
     results.push(...data.items);
