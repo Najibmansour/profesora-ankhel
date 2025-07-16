@@ -48,7 +48,7 @@ export default function Home() {
       },
       {
         id: 3,
-        icon: "😫👉🏽👈🏽",
+        icon: "💭",
         image: wiam_pic,
         title: "Wiam",
         paragraph:

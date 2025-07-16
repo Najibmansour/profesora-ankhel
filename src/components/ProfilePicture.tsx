@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import angy_main from "../../public/images/angy_main.png";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProfilePictureProps {
   className?: string;
@@ -65,22 +66,25 @@ export default function ProfilePicture({
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.8 + 1 * 0.1 }}
-          className="absolute top-2 right-[5rem] text-2xl z-0"
+          className="absolute top-2 right-[5rem] text-2xl z-20"
         >
-          <motion.div
-            animate={{
-              y: [0, -6, 4, -3, 0],
-              x: [0, 5, 2, 0],
-              rotate: [0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          >
-            💭
-          </motion.div>
+          <Link href="/search">
+            <motion.div
+              className="cursor-pointer"
+              animate={{
+                y: [0, -6, 4, -3, 0],
+                x: [0, 5, 2, 0],
+                rotate: [0],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              💭
+            </motion.div>
+          </Link>
         </motion.div>
 
         <motion.div
