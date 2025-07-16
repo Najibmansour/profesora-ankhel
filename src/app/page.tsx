@@ -20,7 +20,7 @@ import lacan_jumpsace from "../../public/images/lacan_jumpscare.png";
 
 export default function Home() {
   const heroData = {
-    name: "Profesora Ankhel",
+    name: "Profesora Angel",
     cards: [
       {
         id: 0,
